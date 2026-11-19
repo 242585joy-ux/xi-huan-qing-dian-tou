@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>喜欢请点头｜Yeonie's Phone</title>
+<style>
+:root{--ink:#393331;--muted:#938783;--rose:#b87979;--pale:#f7eeee;--cream:#fbf8f4;--line:#eee5e1}
+*{box-sizing:border-box}body{margin:0;background:#eee8e4;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.phone{width:min(100%,410px);min-height:790px;background:var(--cream);border:8px solid #292726;border-radius:42px;overflow:hidden;box-shadow:0 22px 70px #54413b33;position:relative}
+.status{height:36px;padding:10px 22px 0;display:flex;justify-content:space-between;font-size:12px;font-weight:700}
+.top{padding:16px 22px 12px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:10px;letter-spacing:2px;color:var(--rose);font-weight:700}.brand{font-family:Georgia,serif;font-size:27px;letter-spacing:1px;margin:5px 0}.sub{font-size:11px;color:var(--muted)}
+main{padding:18px 18px 90px}.screen{display:none}.screen.active{display:block}
+.hero{background:linear-gradient(135deg,#f1dddd,#f8eee8 60%,#e9d9d3);border-radius:22px;padding:22px 20px;margin-bottom:17px}
+.day{font-size:11px;letter-spacing:2px;color:#966b6b}.hero h1{font-family:Georgia,serif;font-weight:500;font-size:26px;margin:8px 0}.hero p{font-size:12px;line-height:1.7;margin:0;color:#715f5b}
+.section-title{font-size:14px;font-weight:700;margin:18px 2px 10px}.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tile{background:white;border:1px solid var(--line);border-radius:17px;padding:15px 7px;text-align:center;cursor:pointer}
+.tile .emoji{font-size:24px}.tile strong{display:block;font-size:12px;margin-top:7px}.tile small{color:var(--muted);font-size:10px}
+.notice,.bubble,.profile,.choice{background:white;border:1px solid var(--line);border-radius:15px;padding:13px;margin:9px 0;font-size:12px;line-height:1.65}
+.notice b{color:var(--rose)}.chathead{display:flex;align-items:center;gap:10px;padding:10px 0 14px;border-bottom:1px solid var(--line)}
+.avatar{width:38px;height:38px;border-radius:50%;background:#ead7d3;display:grid;place-items:center;font-size:18px}
+.chatname{font-weight:700;font-size:13px}.chatmeta{font-size:10px;color:var(--muted)}
+.bubble{max-width:84%;padding:11px 13px}.bubble.them{border-top-left-radius:4px}.bubble.me{margin-left:auto;background:#f3e4e2;border-color:#efd9d7;border-top-right-radius:4px}
+.time{text-align:center;color:#aaa;font-size:10px;margin:12px}
+.replyrow{display:flex;gap:7px;margin-top:12px}.replyrow input{min-width:0;flex:1;border:1px solid var(--line);border-radius:20px;padding:11px 13px;background:white;font-size:12px}.btn{border:0;background:var(--rose);color:white;border-radius:20px;padding:10px 15px;font-size:12px;cursor:pointer}
+.profile{display:flex;gap:12px;align-items:center}.profile .avatar{width:48px;height:48px;flex-shrink:0}.profile p{margin:3px 0 0;color:var(--muted);font-size:11px}
+.choice{cursor:pointer}.choice:hover,.tile:hover{border-color:#d5aaaa}.pill{display:inline-block;background:var(--pale);color:#986e6e;padding:4px 8px;border-radius:20px;font-size:10px;margin-top:6px}
+.bottom{position:absolute;bottom:0;left:0;right:0;background:#fffdfb;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:9px 5px 13px}
+.nav{background:none;border:0;color:#a69b96;font-size:10px;cursor:pointer;padding:5px}.nav span{display:block;font-size:19px;margin-bottom:3px}.nav.active{color:var(--rose);font-weight:700}
+.footer-note{font-size:10px;color:#a99d98;text-align:center;margin-top:20px}
+@media(max-width:450px){.wrap{padding:0}.phone{width:100%;min-height:100vh;border:0;border-radius:0;box-shadow:none}.bottom{padding-bottom:max(13px,env(safe-area-inset-bottom))}}
+</style>
+</head>
+<body><div class="wrap"><div class="phone">
+<div class="status"><span>9:41</span><span>●●●  ▰</span></div>
+<header class="top"><div class="eyebrow">A DATING REALITY EXPERIENCE</div><div class="brand">喜欢请点头</div><div class="sub">第一季 · 10 DAYS · 8 EPISODES</div></header>
+<main>
+<section id="home" class="screen active">
+<div class="hero"><div class="day">DAY 01 · 初次见面</div><h1>心动，从这一刻开始。</h1><p>欢迎来到《喜欢请点头》。接下来的十天，认真认识别人，也别忘了听听自己的心。</p></div>
+<div class="section-title">Yeonie 的手机</div>
+<div class="tile-grid">
+<div class="tile" onclick="show('chat')"><div class="emoji">💬</div><strong>聊天</strong><small>看看新消息</small></div>
+<div class="tile" onclick="show('guests')"><div class="emoji">👥</div><strong>嘉宾</strong><small>认识他们</small></div>
+<div class="tile" onclick="show('heart')"><div class="emoji">♡</div><strong>心动</strong><small>做出选择</small></div>
+<div class="tile" onclick="show('notice')"><div class="emoji">🔔</div><strong>节目通知</strong><small>最新安排</small></div>
+<div class="tile" onclick="show('schedule')"><div class="emoji">🗓️</div><strong>日程</strong><small>录制行程</small></div>
+<div class="tile" onclick="show('secret')"><div class="emoji">🔒</div><strong>秘密档案</strong><small>未解锁</small></div>
+</div>
+<div class="section-title">今日提醒</div><div class="notice"><b>17:30</b>　六位嘉宾一起准备晚餐<br><b>18:30</b>　别墅晚餐时间<br><b>21:00</b>　第一次匿名心动短信</div>
+</section>
+<section id="chat" class="screen">
+<div class="section-title">消息 · 2</div><div class="profile" onclick="openChat('江屿')"><div class="avatar">☀️</div><div><b>江屿</b><p>好啊，那我给你留个简单的任务 😂</p></div></div>
+<div class="profile" onclick="openChat('沈叙白')"><div class="avatar">🌿</div><div><b>沈叙白</b><p>你的房间找到了吗？别墅还蛮大的哈哈。</p></div></div>
+<div id="conversation" style="display:none"><div class="chathead"><div class="avatar" id="chatAvatar">☀️</div><div><div class="chatname" id="chatTitle">江屿</div><div class="chatmeta">《喜欢请点头》嘉宾</div></div></div><div id="messages"></div><div class="replyrow"><input id="reply" placeholder="输入消息…" maxlength="160"><button class="btn" onclick="send()">发送</button></div></div>
+</section>
+<section id="guests" class="screen"><div class="section-title">初始嘉宾 · 6位</div>
+<div class="profile"><div class="avatar">🖤</div><div><b>顾言深 · 26</b><p>投资顾问｜理性成熟，慢热</p></div></div>
+<div class="profile"><div class="avatar">🌿</div><div><b>沈叙白 · 24</b><p>建筑设计师｜温柔细心，健谈</p></div></div>
+<div class="profile"><div class="avatar">☀️</div><div><b>江屿 · 25</b><p>创业者｜幽默自信，善于观察</p></div></div>
+<div class="profile"><div class="avatar">🌷</div><div><b>Yeonie</b><p>女嘉宾｜这是你的故事</p></div></div>
+<div class="profile"><div class="avatar">✨</div><div><b>徐知夏 · 25</b><p>品牌策划｜独立直率，有主见</p></div></div>
+<div class="profile"><div class="avatar">🎧</div><div><b>陈予宁 · 24</b><p>音乐制作人｜浪漫细腻，善于倾听</p></div></div>
+</section>
+<section id="heart" class="screen"><div class="hero"><div class="day">FIRST IMPRESSION</div><h1>第一次心动选择</h1><p>选择你目前最想进一步认识的嘉宾。你的选择不会自动决定对方的心意。</p></div>
+<div id="heartChoices"><div class="choice" onclick="choose('顾言深')">顾言深 <span class="pill">理性成熟</span></div><div class="choice" onclick="choose('沈叙白')">沈叙白 <span class="pill">温柔细心</span></div><div class="choice" onclick="choose('江屿')">江屿 <span class="pill">幽默自信</span></div></div><div id="heartResult" class="notice">你的选择将被节目组匿名记录。</div></section>
+<section id="notice" class="screen"><div class="section-title">节目组通知</div><div class="notice"><b>17:30 · 晚餐任务</b><br>六位嘉宾共同准备晚餐。请在厨房和大家一起完成任务。</div><div class="notice"><b>18:30 · 晚餐时间</b><br>请所有嘉宾准时到餐厅集合。</div><div class="notice"><b>21:00 · 匿名心动短信</b><br>今晚，你可以给一位嘉宾发送一条匿名短信。</div></section>
+<section id="schedule" class="screen"><div class="section-title">录制日程 · DAY 01</div><div class="notice">15:00　嘉宾入住别墅</div><div class="notice">17:30　共同准备晚餐</div><div class="notice">18:30　第一次集体晚餐</div><div class="notice">21:00　匿名心动短信</div></section>
+<section id="secret" class="screen"><div class="hero"><div class="day">CONFIDENTIAL</div><h1>秘密档案</h1><p>有些故事暂时还不能被看见。随着录制推进，线索会逐渐出现。</p></div><div class="notice">🔒 前任关系档案：尚未解锁</div><div class="notice">🔒 隐藏任务：尚未解锁</div></section>
+<div class="footer-note">本地试玩版 · 进度保存在当前浏览器</div>
+</main>
+<nav class="bottom">
+<button class="nav active" onclick="show('home',this)"><span>⌂</span>首页</button>
+<button class="nav" onclick="show('chat',this)"><span>✉</span>消息</button>
+<button class="nav" onclick="show('guests',this)"><span>♧</span>嘉宾</button>
+<button class="nav" onclick="show('heart',this)"><span>♡</span>心动</button>
+</nav>
+</div></div>
+<script>
+let current='江屿';
+function show(id,el){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav').forEach(x=>x.classList.remove('active'));if(el)el.classList.add('active');}
+function openChat(name){current=name;document.getElementById('conversation').style.display='block';document.getElementById('chatTitle').textContent=name;document.getElementById('chatAvatar').textContent=name==='江屿'?'☀️':'🌿';let msgs=name==='江屿'?['你好呀，刚刚行李还顺利吗？我是江屿。','哈哈，那我等下下去帮忙！','好啊，那我给你留个简单的任务 😂']:['你的房间找到了吗？别墅还蛮大的哈哈。'];document.getElementById('messages').innerHTML='<div class="time">DAY 01</div>'+msgs.map((m,i)=>'<div class="bubble '+(name==='江屿'&&i===1?'me':'them')+'">'+m+'</div>').join('');}
+function send(){let input=document.getElementById('reply'),v=input.value.trim();if(!v)return;document.getElementById('messages').innerHTML+='<div class="bubble me"></div>';document.getElementById('messages').lastElementChild.textContent=v;input.value='';localStorage.setItem('xi_reply_'+current,v);}
+function choose(name){localStorage.setItem('xi_first_choice',name);document.getElementById('heartResult').textContent='你选择了 '+name+'。节目组已匿名记录你的心意。';}
+</script>
+</body></html>
