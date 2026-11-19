@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>喜欢请点头｜第一季完整版</title>
+<style>
+:root{--bg:#faf6f2;--paper:#fffdfa;--ink:#393230;--muted:#978a84;--rose:#b77c7d;--rose2:#f2e4e1;--line:#eee4de;--gold:#b99b70;--green:#718b79}
+*{box-sizing:border-box}body{margin:0;background:#eae3de;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.shell{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:18px}.phone{width:min(100%,420px);height:min(920px,calc(100vh - 36px));min-height:700px;background:var(--bg);border:8px solid #292625;border-radius:40px;overflow:hidden;position:relative;box-shadow:0 24px 70px #46332c38;display:flex;flex-direction:column}
+.status{height:30px;flex:none;padding:8px 20px 0;display:flex;justify-content:space-between;font-size:11px;font-weight:700}.header{padding:12px 20px 13px;border-bottom:1px solid var(--line);flex:none;display:flex;justify-content:space-between;align-items:center}.brand{font:25px Georgia,serif;letter-spacing:1px}.sub{font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:4px}.headright{font-size:10px;color:var(--rose);text-align:right}
+main{padding:16px 16px 88px;overflow-y:auto;flex:1}.page{display:none}.page.active{display:block}
+.kicker{font-size:9px;letter-spacing:2px;color:var(--rose);font-weight:700}.hero{border-radius:21px;padding:19px;background:linear-gradient(135deg,#f1dfdc,#f8eee8 65%,#e9ddd4);margin-bottom:14px}.hero h1{font:25px Georgia,serif;font-weight:500;margin:8px 0}.hero p{font-size:11px;line-height:1.7;color:#705f59;margin:0}
+.section{font-size:13px;font-weight:700;margin:16px 2px 9px}.muted{color:var(--muted);font-size:10px;line-height:1.65}.card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:12px;margin:8px 0;font-size:11px;line-height:1.65}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.app{border:1px solid var(--line);background:#fffdfa;border-radius:15px;padding:13px 5px;text-align:center;cursor:pointer}.app span{display:block;font-size:22px}.app b{display:block;font-size:10px;margin-top:6px}
+.btn{border:0;border-radius:20px;background:var(--rose);color:white;padding:10px 14px;font-size:11px;cursor:pointer}.btn.alt{background:#eee4df;color:#6e5b56}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}.btn:disabled{opacity:.4}
+.choice{display:block;width:100%;text-align:left;border:1px solid var(--line);background:white;border-radius:14px;padding:12px;margin:8px 0;color:var(--ink);cursor:pointer;font-size:11px;line-height:1.6}.choice b{font-size:11px}.choice small{display:block;color:var(--muted);font-size:9px;margin-top:3px}.choice:hover{border-color:#d6b1ad;background:#fffafa}
+.person{display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--line);padding:10px;border-radius:14px;margin:8px 0}.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#efdfdc;font-size:18px;flex:none}.person b{font-size:11px}.person p{font-size:9px;color:var(--muted);margin:3px 0 0}.right{margin-left:auto}
+.bubble{max-width:88%;background:white;border:1px solid var(--line);padding:9px 11px;border-radius:13px 13px 13px 4px;font-size:10px;line-height:1.6;margin:7px 0}.bubble.me{margin-left:auto;background:#f1dfdd;border-radius:13px 13px 4px 13px}.chatbox{background:#f7f0ec;border-radius:15px;padding:10px;min-height:120px}
+.result{background:#f5e9e6;border:1px solid #ecd8d4;border-radius:14px;padding:12px;font-size:10px;line-height:1.75;margin:10px 0}.tag{display:inline-block;background:#f4e7e4;color:#9b6d6d;border-radius:20px;padding:3px 7px;font-size:9px;margin:2px}
+input{width:100%;border:1px solid var(--line);border-radius:20px;padding:10px 12px;background:white;font-size:11px;margin:7px 0}.progress{height:6px;background:#eee5df;border-radius:10px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;background:var(--rose);width:0}
+.bottom{position:absolute;bottom:0;left:0;right:0;background:#fffdfa;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:8px 4px max(10px,env(safe-area-inset-bottom))}
+.nav{border:0;background:none;color:#a79a94;font-size:9px;cursor:pointer}.nav span{display:block;font-size:18px;margin-bottom:2px}.nav.on{color:var(--rose);font-weight:700}.tiny{text-align:center;color:#aa9d97;font-size:9px;margin:14px 0}
+@media(max-width:450px){.shell{padding:0}.phone{width:100%;height:100dvh;min-height:100dvh;border:0;border-radius:0;box-shadow:none}}
+</style></head>
+<body><div class="shell"><div class="phone">
+<div class="status"><span>9:41</span><span>●●● ▰</span></div>
+<header class="header"><div><div class="brand">喜欢请点头</div><div class="sub">SEASON 01 · 10 DAYS · 8 EPISODES</div></div><div class="headright" id="headDay">DAY 01<br>EP01</div></header>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div class="kicker">A DATING REALITY EXPERIENCE</div><h1>喜欢，请点头。</h1><p>十天相处，八集故事。有人勇敢靠近，有人藏起过去。你的每一次选择，都会留下不同的回音。</p></div>
+<div class="card"><b>Yeonie 的录制进度</b><div class="progress"><i id="progressBar"></i></div><div class="muted" id="progressText">EP01 · 第一眼心动 · 尚未开始</div></div>
+<div class="section">手机应用</div><div class="grid">
+<div class="app" onclick="go('episodes')"><span>🎬</span><b>节目进度</b></div>
+<div class="app" onclick="go('chat')"><span>💬</span><b>聊天</b></div>
+<div class="app" onclick="go('guests')"><span>👥</span><b>嘉宾</b></div>
+<div class="app" onclick="go('heart')"><span>♡</span><b>心动记录</b></div>
+<div class="app" onclick="go('notice')"><span>🔔</span><b>节目通知</b></div>
+<div class="app" onclick="go('clues')"><span>🔎</span><b>线索档案</b></div>
+</div>
+<div class="section">继续录制</div><div class="card"><b id="continueTitle">EP01 · 第一眼心动</b><p class="muted" id="continueDesc">六位嘉宾入住别墅，准备迎接第一次心动选择。</p><button class="btn" onclick="continueGame()">进入剧情</button></div>
+<div class="tiny">单机剧情版 · 进度自动保存在当前浏览器</div>
+</section>
+<section id="episodes" class="page"><div class="kicker">SEASON 01</div><div class="section">八集正片 · 十天录制</div><div id="episodeList"></div></section>
+<section id="story" class="page"><div class="kicker" id="storyKicker">EP01 · DAY 01</div><div class="hero"><h1 id="storyTitle"></h1><p id="storyIntro"></p></div><div class="section" id="storyPrompt">请选择你的行动</div><div id="storyChoices"></div><div id="storyResult"></div><div style="display:flex;gap:8px;margin-top:12px"><button class="btn alt" onclick="go('episodes')">返回分集</button><button class="btn" id="nextSceneBtn" onclick="nextEpisode()" style="display:none">继续下一集</button></div></section>
+<section id="chat" class="page"><div class="kicker">PRIVATE MESSAGES</div><div class="section">嘉宾聊天</div><div id="chatList"></div><div id="chatThread" style="display:none"><div class="section" id="chatTitle"></div><div class="chatbox" id="chatMessages"></div><input id="chatInput" maxlength="140" placeholder="输入回复…"><button class="btn" onclick="sendChat()">发送</button></div></section>
+<section id="guests" class="page"><div class="kicker">THE HOUSEMATES</div><div class="section">初始嘉宾 · 6位</div><div id="guestList"></div><div class="card"><b>新嘉宾预告</b><p class="muted">陆承宇 · 27岁 · 品牌创始人。将在录制中途空降。</p></div></section>
+<section id="heart" class="page"><div class="hero"><div class="kicker">YOUR FEELINGS</div><h1>心动记录</h1><p>你可以改变主意。选择不代表承诺，只代表此刻愿意了解。</p></div><div class="card" id="heartData">你还没有做出心动选择。</div><div class="section">第一印象点头</div><div id="heartChoices"></div></section>
+<section id="notice" class="page"><div class="section">节目组通知</div><div class="card"><b>DAY 01 · 17:30</b><p class="muted">六位嘉宾共同准备晚餐。</p></div><div class="card"><b>DAY 01 · 21:00</b><p class="muted">第一次匿名心动短信。请认真选择收件人。</p></div><div class="card"><b>节目规则</b><p class="muted">双向点头可获得约会机会；单向或无人回应可能进入危险区。每位嘉宾都有自己的选择。</p></div></section>
+<section id="clues" class="page"><div class="hero"><div class="kicker">CONFIDENTIAL FILES</div><h1>前任推理档案</h1><p>节目里有两组曾经交往过的嘉宾。请留意对话、习惯与细节，逐步推理。</p></div><div id="clueList"></div><div class="section">你的推理</div><div class="muted">选择你认为有过往关系的组合。线索不足时可以暂时保留判断。</div><div id="deduction"></div></section>
+<section id="ending" class="page"><div class="hero"><div class="kicker">SEASON FINALE</div><h1>喜欢，请点头。</h1><p id="endingText"></p></div><div class="card" id="endingDetail"></div><button class="btn" onclick="resetGame()">重新开始第一季</button></section>
+</main>
+<nav class="bottom"><button class="nav on" onclick="go('home',this)"><span>⌂</span>首页</button><button class="nav" onclick="go('episodes',this)"><span>🎬</span>节目</button><button class="nav" onclick="go('chat',this)"><span>✉</span>聊天</button><button class="nav" onclick="go('heart',this)"><span>♡</span>心动</button></nav>
+</div></div>
+<script>
+const eps=[
+{title:'第一眼心动',day:'DAY 01',intro:'六位嘉宾入住别墅。第一次见面，有人主动搭话，有人安静观察。傍晚，大家一起准备晚餐。',prompt:'厨房里，你想和谁一起行动？',choices:[['江屿','帮江屿洗番茄。他笑着把小篮子递给你：“我的厨房搭档来了。”','你们边洗番茄边聊天。江屿说你比刚进门时放松了不少。'],['沈叙白','帮沈叙白准备饮料。他细心地问你喜欢喝什么。','沈叙白把杯子递给你：“等下吃饭的时候，记得尝尝大家做的菜。”'],['顾言深','加入顾言深和徐知夏的菜单讨论。','顾言深认真听完你的建议，点头说：“这个安排比较有效率。”'],['陈予宁','和陈予宁一起检查食材。','陈予宁很自然地和你聊起喜欢的料理，你们很快熟悉起来。'],['大家','提议大家一起决定菜单。','江屿开玩笑说终于不用一个人被分配任务了，厨房里响起笑声。']]},
+{title:'请回答我的心动',day:'DAY 02',intro:'第一晚之后，大家开始留意彼此。节目组安排第一次双人约会邀请，点头与摇头都需要勇气。',prompt:'你想把约会邀请送给谁？',choices:[['江屿','邀请江屿去城市咖啡馆。','江屿有些意外，随后笑着答应：“那我可要认真挑一家店了。”'],['沈叙白','邀请沈叙白去花园市集。','沈叙白温和地说：“好啊，正好可以慢慢走走。”'],['顾言深','邀请顾言深去艺术展。','顾言深思考片刻，答应和你一起去。'],['暂时不邀请','先观察大家之间的互动，不急着配对。','你决定把时间留给认识所有人。节目组记录了你的选择。']]},
+{title:'突然出现的第七个人',day:'DAY 03',intro:'别墅门铃响起。新嘉宾陆承宇加入，他自信直接，很快和大家熟络起来，也带来新的变量。',prompt:'陆承宇主动问你要不要一起参观别墅露台。',choices:[['接受邀请','和陆承宇一起去露台，认识这位新嘉宾。','陆承宇谈吐直接，也很会观察。他问你目前最想了解谁。'],['邀请大家同行','提议大家一起参观，不想让新嘉宾落单。','陆承宇笑着说你很会照顾气氛，其他嘉宾也加入了。'],['婉拒并休息','告诉他想先整理一下自己的东西。','陆承宇理解地点点头，没有勉强你。']]},
+{title:'我们是不是在哪里见过',day:'DAY 04',intro:'一张旧照片、一句熟悉的口头禅，让别墅里的气氛有些微妙。你开始怀疑，有人并不是第一次认识彼此。',prompt:'晚餐后，你注意到顾言深和徐知夏谈话时突然沉默。',choices:[['留意细节','不直接追问，先记下他们的反应。','你发现两人似乎对某个共同地点都很熟悉。'],['自然询问','用轻松的语气问他们是不是以前认识。','徐知夏笑了笑：“这个问题嘛，以后也许会有答案。”'],['转移话题','不想让任何人感到尴尬，主动聊起明天的安排。','气氛重新轻松起来，但疑问仍留在你心里。']]},
+{title:'心动还是错觉',day:'DAY 05',intro:'秘密任务开始。每个人收到不同任务，观察与误会同时发生。晚上，危险区投票首次开启。',prompt:'节目组给你一个秘密任务：选择一位嘉宾，完成一次真诚的深入谈话。',choices:[['找江屿谈谈','问问他平时幽默背后，是否也有认真烦恼的时刻。','江屿难得认真地分享了自己的压力，也反问你最近在意什么。'],['找沈叙白谈谈','聊聊他在关系里最看重的事情。','沈叙白说，比起热闹，他更在意相处时能不能自在做自己。'],['找顾言深谈谈','问问他为什么总是先观察再表达。','顾言深说自己需要时间确认感受，不喜欢随便给承诺。'],['找陆承宇谈谈','问问他加入节目后最想认识谁。','陆承宇坦率地说，他不想只做旁观者。']]},
+{title:'不能说的过去',day:'DAY 07',intro:'前任线索逐渐拼合。有人选择坦白，有人仍然沉默。节目组公布新的规则：嘉宾可以选择主动解释，也可以保留隐私。',prompt:'你发现一条线索，似乎指向一段旧关系。你会怎么做？',choices:[['私下关心当事人','给对方空间，询问是否需要有人倾听。','对方感谢你的体贴，但暂时没有透露更多。'],['等待公开说明','尊重每个人的节奏，不急着揭开秘密。','当晚节目组宣布：下一集将进行前任身份确认。'],['表达自己的看法','告诉大家过去不应该成为互相猜测和攻击的理由。','几位嘉宾认同你的想法，谈话变得坦诚。']]},
+{title:'最后一次选择',day:'DAY 09',intro:'最终约会日。每个人都要面对自己的真实心意。没有人能替你做决定。',prompt:'在最终选择前，你最想和谁进行一次单独谈话？',choices:[['江屿','和江屿回顾这十天的相处。','江屿说，和你相处时他学会了不只用玩笑表达在意。'],['沈叙白','和沈叙白聊聊彼此的期待。','沈叙白说，他珍惜你们之间自然舒服的相处。'],['顾言深','和顾言深确认彼此的想法。','顾言深坦白自己虽然慢热，但每一次靠近都是认真考虑后的选择。'],['陆承宇','和陆承宇谈谈加入节目后的变化。','陆承宇说，他很高兴有机会认识真实的你。'],['独自整理心情','把时间留给自己，确认真正想要的关系。','你意识到，最后的选择不需要为了迎合任何人。']]},
+{title:'喜欢，请点头',day:'DAY 10',intro:'最后一晚，所有嘉宾站在选择台前。你可以向心动的人点头，也可以为自己摇头，选择暂时不配对。',prompt:'你的最终选择是什么？',choices:[['向江屿点头','你选择江屿，愿意继续认识彼此。','如果江屿也向你点头，你们将成为双向配对；无论结果如何，你都勇敢表达了心意。'],['向沈叙白点头','你选择沈叙白，愿意继续认识彼此。','如果沈叙白也向你点头，你们将成为双向配对；这份心意有了答案。'],['向顾言深点头','你选择顾言深，愿意继续认识彼此。','如果顾言深也向你点头，你们将成为双向配对；慢热的故事也可以有回应。'],['向陆承宇点头','你选择陆承宇，愿意继续认识彼此。','如果陆承宇也向你点头，你们将成为双向配对；新的相遇也值得认真。'],['为自己点头','你选择不配对，把这十天的成长带回生活。','你没有等待别人定义你的价值。你为自己的真诚与勇气点头。']]}
+];
+const guests=[['顾言深','26岁 · 投资顾问','🖤','理性成熟，慢热。习惯先观察再表达。'],['沈叙白','24岁 · 建筑设计师','🌿','温柔细心，健谈。擅长让人放松。'],['江屿','25岁 · 创业者','☀️','幽默自信，善于观察。常用玩笑打开话题。'],['Yeonie','女嘉宾 · 你','🌷','你的故事由你决定。'],['徐知夏','25岁 · 品牌策划','✨','独立直率，有主见。'],['陈予宁','24岁 · 音乐制作人','🎧','浪漫细腻，善于倾听。']];
+let state={ep:0,choices:{},heart:'',messages:{},clues:[],deduction:''};
+function save(){localStorage.setItem('xd_game_save',JSON.stringify(state));renderHome();}
+function load(){try{let s=JSON.parse(localStorage.getItem('xd_game_save'));if(s)state={...state,...s};}catch(e){}}
+function go(id,el){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav').forEach(n=>n.classList.remove('on'));if(el)el.classList.add('on');}
+function renderHome(){let n=Object.keys(state.choices).length;document.getElementById('progressBar').style.width=(n/8*100)+'%';document.getElementById('progressText').textContent='已完成 '+n+'/8 集';let next=Math.min(state.ep,7);document.getElementById('continueTitle').textContent='EP0'+(next+1)+' · '+eps[next].title;document.getElementById('continueDesc').textContent=eps[next].intro;document.getElementById('headDay').innerHTML=eps[next].day+'<br>EP0'+(next+1);}
+function renderEpisodes(){let h='';eps.forEach((e,i)=>{let done=state.choices[i]!==undefined;let locked=i>state.ep;h+=`<div class="card"><div style="display:flex;justify-content:space-between"><b>EP0${i+1} · ${e.title}</b><span class="tag">${done?'已完成':locked?'未解锁':e.day}</span></div><p class="muted">${e.intro}</p><button class="btn ${locked?'ghost':''}" ${locked?'disabled':''} onclick="startEp(${i})">${done?'重玩本集':locked?'尚未解锁':'开始剧情'}</button></div>`});document.getElementById('episodeList').innerHTML=h;}
+function continueGame(){startEp(Math.min(state.ep,7));}
+function startEp(i){if(i>state.ep)return;let e=eps[i];document.getElementById('storyKicker').textContent='EP0'+(i+1)+' · '+e.day;document.getElementById('storyTitle').textContent=e.title;document.getElementById('storyIntro').textContent=e.intro;document.getElementById('storyPrompt').textContent=e.prompt;document.getElementById('storyResult').innerHTML='';document.getElementById('nextSceneBtn').style.display='none';let h='';e.choices.forEach((c,j)=>h+=`<button class="choice" onclick="pick(${i},${j})"><b>${c[0]}</b><small>${c[1]}</small></button>`);document.getElementById('storyChoices').innerHTML=h;if(state.choices[i]!==undefined)showPick(i,state.choices[i]);go('story');}
+function pick(i,j){state.choices[i]=j;if(i===7){state.ep=8;}else state.ep=Math.max(state.ep,i+1);save();showPick(i,j);}
+function showPick(i,j){let c=eps[i].choices[j];document.getElementById('storyResult').innerHTML=`<div class="result"><b>你的选择：${c[0]}</b><br>${c[2]}<br><br><span class="tag">剧情选择已保存</span></div>`;document.getElementById('nextSceneBtn').style.display='inline-block';document.getElementById('nextSceneBtn').textContent=i===7?'查看季终结果':'继续下一集';}
+function nextEpisode(){if(state.ep>=8){showEnding();return;}startEp(state.ep);}
+function showEnding(){let pick=eps[7].choices[state.choices[7]??4];document.getElementById('endingText').textContent=pick[2];document.getElementById('endingDetail').textContent='本季完成。你走过了十天的相遇、观察、选择与告别。记住：点头是勇气，摇头也是诚实。';go('ending');}
+function renderGuests(){document.getElementById('guestList').innerHTML=guests.map(g=>`<div class="person"><div class="avatar">${g[2]}</div><div><b>${g[0]}</b><p>${g[1]}<br>${g[3]}</p></div></div>`).join('');}
+function renderHeart(){let names=['顾言深','沈叙白','江屿','陆承宇'];document.getElementById('heartChoices').innerHTML=names.map(n=>`<button class="choice" onclick="heart('${n}')">向 ${n} 点头 <small>记录你目前最想了解的人</small></button>`).join('')+'<button class="choice" onclick="heart(&quot;暂时不选择&quot;)">暂时不选择<small>给自己更多时间</small></button>';document.getElementById('heartData').textContent=state.heart?'目前的心动记录：'+state.heart:'你还没有做出心动选择。';}
+function heart(n){state.heart=n;save();renderHeart();}
+function renderChat(){let names=['江屿','沈叙白','顾言深','徐知夏','陈予宁'];document.getElementById('chatList').innerHTML=names.map(n=>`<div class="person"><div class="avatar">${({江屿:'☀️',沈叙白:'🌿',顾言深:'🖤',徐知夏:'✨',陈予宁:'🎧'})[n]}</div><div><b>${n}</b><p>${state.messages[n]?.slice(-1)[0]||'打开对话'}</p></div><button class="btn alt right" onclick="thread('${n}')">打开</button></div>`).join('');}
+function thread(n){document.getElementById('chatThread').style.display='block';document.getElementById('chatTitle').textContent=n+' · 私聊';let defaults={江屿:'刚刚厨房还顺利吗？感觉大家慢慢熟起来了。',沈叙白:'今天还适应吗？如果有不清楚的地方可以问我。',顾言深:'今天的安排还习惯吗？别墅确实有点大。',徐知夏:'今天认识新朋友感觉怎么样？我觉得大家个性差好多。',陈予宁:'刚刚一起整理食材还蛮有趣的，下次可以一起研究菜单。'};let arr=state.messages[n]||[defaults[n]];document.getElementById('chatMessages').innerHTML=arr.map((m,i)=>`<div class="bubble ${i>0?'me':''}"></div>`).join('');[...document.querySelectorAll('#chatMessages .bubble')].forEach((x,i)=>x.textContent=arr[i]);document.getElementById('chatThread').dataset.name=n;}
+function sendChat(){let input=document.getElementById('chatInput'),v=input.value.trim();if(!v)return;let n=document.getElementById('chatThread').dataset.name;state.messages[n]=state.messages[n]||[];state.messages[n].push(v);save();thread(n);input.value='';}
+function renderClues(){let c=['线索 01：顾言深和徐知夏似乎对同一个旧地点很熟悉。','线索 02：有人提到一首旧歌时，沈叙白短暂沉默。','线索 03：两组前任关系将在后续剧情中逐步揭晓。'];document.getElementById('clueList').innerHTML=c.map(x=>`<div class="card">${x}</div>`).join('');document.getElementById('deduction').innerHTML='<button class="choice" onclick="deduce(1)">我怀疑顾言深与徐知夏曾经交往</button><button class="choice" onclick="deduce(2)">我想再观察，不急着判断</button><button class="choice" onclick="deduce(3)">我怀疑还有另一组关系</button><div class="result" id="deduceResult">'+(state.deduction||'推理尚未提交。')+'</div>';}
+function deduce(n){state.deduction=['','你记录了顾言深与徐知夏这条线索。继续观察后续细节。','你选择暂时保留判断。','你认为还有另一组关系值得留意。'][n];save();renderClues();}
+function resetGame(){if(confirm('确定要清除本机进度并重新开始吗？')){localStorage.removeItem('xd_game_save');state={ep:0,choices:{},heart:'',messages:{},clues:[],deduction:''};renderAll();go('home');}}
+function renderAll(){renderHome();renderEpisodes();renderGuests();renderHeart();renderChat();renderClues();}
+load();renderAll();
+</script></body></html>
